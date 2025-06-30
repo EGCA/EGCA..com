@@ -1,0 +1,13 @@
+Please enhance the user interface with subtle, modern microanimations using CSS or lightweight JavaScript. Here are the animation requests:
+
+Element	Animation
+Buttons	Smooth hover effect (scale up + color change)
+Team cards	Slight elevation (box-shadow) on hover
+Hero section text	fadeIn on page load
+Section transitions	fadeUp when scrolling into view (use IntersectionObserver if needed)
+Navigation link hover	Underline slide-in animation
+Dark mode toggle switch	Smooth transition on toggle
+Form inputs/buttons	Focused border glow or background transition
+
+Use transition: all 0.3s ease; as a base where appropriate. Animations should be lightweight, not overdone, and compatible with mobile.
+

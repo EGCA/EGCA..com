@@ -1,0 +1,97 @@
+Hello again! The website is looking fantastic. I’d now like to upgrade the interactivity and make the design even more dynamic and user-friendly. Please implement the following three feature enhancements, each with detailed specifications.
+
+🌐 1. Add a Language Switcher Button (i18n)
+Goal:
+Allow users to select a different European language, and auto-translate all website content accordingly.
+
+Implementation Details:
+Location: Place this button next to the existing dark/light mode toggle in the top-right corner of the header.
+
+Design:
+
+The button should be identical in shape/style to the dark/light toggle.
+
+It should feature a globe icon 🌐 or EU flag 🇪🇺 by default.
+
+On Click:
+
+A dropdown or pop-out menu should appear, listing multiple European languages:
+
+English 🇬🇧 (default), Greek 🇬🇷, French 🇫🇷, German 🇩🇪, Italian 🇮🇹, Spanish 🇪🇸, Polish 🇵🇱, Dutch 🇳🇱
+
+When a language is selected, all site text should dynamically update (including nav, headers, paragraphs, buttons, etc.)
+
+Optional Tech: If helpful, you may use a simple JSON-based solution or static translations per language. No need for full Google Translate API unless already implemented.
+
+🗳️ 2. Add a Voting System in results.html
+Goal:
+Enable users to vote for the team they believe will win, and display a live chart of top 5 teams based on votes.
+
+Section Placement:
+Below the match results content in results.html.
+
+Visual Layout:
+Top of Section: A dynamic bar or donut chart that displays the top 5 voted teams and their current percentage of votes.
+
+Below the Chart:
+
+A dropdown menu or set of team cards/buttons allowing users to vote for their preferred team.
+
+After submitting, the user:
+
+Gets a confirmation message (“Thanks for voting!”)
+
+Can no longer vote again (use localStorage or cookie to store this).
+
+Sees the chart update with their vote.
+
+Logic:
+Each user can only vote once per session/browser.
+
+Voting data can be stored either in local variables, browser storage (for mockup), or temporarily in-memory.
+
+Teams available to vote should match those on the actual Teams subpage.
+
+🧑‍🤝‍🧑 3. Add Team Popups in teams.html
+Goal:
+When users click on a team card, a modal popup should display with:
+
+Full player roster (names, roles)
+
+Coach/staff info
+
+Optional: flag of the country, team logo, or group position
+
+Behavior:
+Clicking on a team triggers a modal (styled consistently with the rest of the site).
+
+The modal should include:
+
+A header with the team name + flag
+
+A section for Players: Name, position (optional: image placeholder)
+
+A section for Coach / Staff: Name(s), role
+
+A close button or click-outside-to-close option
+
+Suggested Enhancements:
+Use smooth microanimations for the popup.
+
+Make sure it’s mobile-friendly (responsive layout).
+
+✅ Final Notes:
+Ensure all new components maintain:
+
+Dark/light mode compatibility
+
+Visual consistency with existing styles
+
+Smooth transitions and animations
+
+If needed, feel free to use vanilla JS, localStorage, or lightweight libraries for charting (e.g., Chart.js).
+
+Once done, I’d love a quick summary of what was implemented and how you structured the translations, voting logic, and modals.
+
+Thank you!
+

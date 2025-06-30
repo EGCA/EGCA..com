@@ -1,0 +1,90 @@
+Hello again! The website looks fantastic overall. I just need some final polish across specific subpages to align the design with our original intent. Please make the following adjustments grouped by page:
+
+🧭 GLOBAL ADJUSTMENTS
+Box Component Consistency
+
+Wherever appropriate, please use the same card/box format already implemented in the “Official Tournament Invitation” section on the Invitations page.
+
+This style includes:
+
+Light background
+
+Rounded corners
+
+Box shadow
+
+Consistent padding
+
+Top border accent (colored line)
+
+📄 info.html PAGE FIXES
+1. Box Design for “Our Mission” & “What is Goalball?”
+These sections should use the same box/card design as “Official Tournament Invitation”.
+
+This keeps the site’s aesthetic consistent and avoids flat sections on an otherwise clean layout.
+
+2. “Get in Touch” Section – Remove “Call Now” Button
+The “Call Now” button under the Phone section is invisible unless hovered and redundant. Please remove this button entirely.
+
+📄 invitations.html PAGE FIXES
+3. Restore Original Format for “Official Tournament Invitation”
+Please bring back the old version’s structure:
+
+A main white box with the “EGCA European 2025 Goalball Tournament” title.
+
+Contact block (with email/organizer details) styled as a nested card within the main box.
+
+Align this style with the screenshots of the old left-side version provided.
+
+4. “Contact for Registration” Button Visibility
+This button blends into the white background—apply a visible button style similar to the “Apply to Volunteer” or “Print Invitation” buttons.
+
+Recommended: outline style or light-filled style with dark text on hover.
+
+📄 members.html PAGE FIXES
+5. Volunteer Support Services Section
+Convert the full text block (with categories like Information & Guidance, Competition Support, etc.) into a group of 3–4 styled boxes using the “Official Tournament Invitation” design.
+
+Example box per category:
+
+Title + bullet list inside a card.
+
+6. Make “Become a Partner” Button Visible
+Like the registration button above, this CTA blends in with the background.
+
+Apply visible styling: e.g., light red background, border, or outline.
+
+📄 help.html PAGE FIXES
+7. Contact Information Section
+Convert it into a styled box, matching the card style of “Official Tournament Invitation”.
+
+8. Contact Form “Clear Form” Button
+This button is nearly invisible until hovered.
+
+Fix it to match the styling of the “Send Message” button (contrast visible at all times).
+
+9. “About This Website” Section – Full Redesign
+This section is currently broken/glitched visually.
+
+Please remake it as a set of cards/boxes (one for each info category):
+
+Accessibility Commitment
+
+Technical Info
+
+Browser Support
+
+Mobile Experience
+
+Use the consistent card design across all with icons and descriptive content inside.
+
+Reference the clean layout from “Official Tournament Invitation” and apply similar spacing and balance.
+
+✅ Final Touches
+Ensure all buttons are fully visible without hover.
+
+Maintain all previously added microanimations and smooth transitions.
+
+Keep the dark mode toggle working properly.
+
+Let me know once these fixes are live and I’ll be happy to give a final pass. You’re doing amazing work!
