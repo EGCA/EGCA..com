@@ -1,3 +1,4 @@
+/* EGCA European 2025 Goalball Tournament - Enhanced Styles */
 /* CSS Custom Properties for Theming */
 :root {
   /* Primary Colors */
@@ -71,7 +72,7 @@
   box-sizing: border-box;
 }
 
-/* Page Transition Loading Animation */
+/* SECTION: Page Transition Loading Animation */
 .page-loader {
   position: fixed;
   top: 0;
@@ -126,7 +127,7 @@ body {
   padding: 0 var(--spacing-md);
 }
 
-/* Navigation */
+/* SECTION: Navigation */
 .navbar {
   position: fixed;
   top: 0;
@@ -267,7 +268,7 @@ body {
   transform: rotate(45deg) translate(-5px, -6px);
 }
 
-/* Mobile Sidebar */
+/* SECTION: Mobile Sidebar */
 .sidebar {
   position: fixed;
   top: 0;
@@ -343,13 +344,13 @@ body {
   color: var(--primary-color);
 }
 
-/* Main Content */
+/* SECTION: Main Content */
 main {
   margin-top: 70px;
   min-height: calc(100vh - 70px);
 }
 
-/* Page Header */
+/* SECTION: Page Header */
 .page-header {
   background: var(--bg-secondary);
   padding: var(--spacing-xxl) 0;
@@ -370,7 +371,7 @@ main {
   margin: 0 auto;
 }
 
-/* Hero Section */
+/* SECTION: Hero Section with Animated Background */
 .hero {
   position: relative;
   min-height: 90vh;
@@ -388,8 +389,22 @@ main {
   left: 0;
   right: 0;
   bottom: 0;
-  background: var(--hero-gradient);
+  background: linear-gradient(45deg, #e74c3c, #f39c12, #e67e22, #d35400);
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease infinite;
   z-index: -1;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .hero-background::after {
@@ -429,7 +444,7 @@ main {
   flex-wrap: wrap;
 }
 
-/* Buttons */
+/* SECTION: Buttons */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -470,10 +485,12 @@ main {
 .btn-primary {
   background: var(--primary-color);
   color: var(--text-white);
+  border: 2px solid var(--primary-color);
 }
 
 .btn-primary:hover {
   background: var(--primary-hover);
+  border-color: var(--primary-hover);
 }
 
 .btn-secondary {
@@ -503,7 +520,27 @@ main {
   color: var(--text-white);
 }
 
-/* Section Styles */
+/* SECTION: Button Styling for Better Visibility */
+.btn-outline {
+  background: var(--bg-primary);
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  transition: all var(--transition-base);
+  font-weight: 600;
+}
+
+.btn-outline:hover {
+  background: var(--primary-color);
+  color: var(--text-white);
+}
+
+/* SECTION: Section Styles */
 section {
   padding: var(--spacing-xxl) 0;
 }
@@ -533,7 +570,7 @@ section {
   height: var(--spacing-xxl);
 }
 
-/* Grid Layouts */
+/* SECTION: Grid Layouts */
 .highlights-grid,
 .inclusivity-grid,
 .contact-grid,
@@ -548,7 +585,7 @@ section {
   margin-top: var(--spacing-xl);
 }
 
-/* Tournament Info Grid - Special Box Layout */
+/* SECTION: Tournament Info Grid - Special Box Layout */
 .info-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -593,7 +630,7 @@ section {
   transform: scaleX(1);
 }
 
-/* Card Styles */
+/* SECTION: Card Styles */
 .highlight-card,
 .inclusivity-card,
 .contact-card,
@@ -610,7 +647,7 @@ section {
   overflow: hidden;
 }
 
-/* Content Card Styles for Invitations */
+/* SECTION: Content Card Styles for Invitations */
 .content-card {
   background: var(--bg-secondary);
   padding: var(--spacing-xxl);
@@ -626,7 +663,7 @@ section {
   transform: translateY(-2px);
 }
 
-/* Registration Grid Within Content Cards */
+/* SECTION: Registration Grid Within Content Cards */
 .content-card .registration-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -648,7 +685,7 @@ section {
   box-shadow: 0 4px 12px var(--shadow-medium);
 }
 
-/* New Invitation Main Card Styling */
+/* SECTION: New Invitation Main Card Styling */
 .invitation-main-card {
   background: var(--bg-secondary);
   border: 1px solid var(--border-light);
@@ -702,27 +739,7 @@ section {
   padding-left: var(--spacing-sm);
 }
 
-/* Button Styling for Better Visibility */
-.btn-outline {
-  background: transparent;
-  color: var(--primary-color);
-  border: 2px solid var(--primary-color);
-  padding: var(--spacing-sm) var(--spacing-lg);
-  border-radius: var(--radius-md);
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: var(--spacing-xs);
-  transition: all var(--transition-base);
-  font-weight: 600;
-}
-
-.btn-outline:hover {
-  background: var(--primary-color);
-  color: var(--text-white);
-}
-
-/* Volunteer Services Grid */
+/* SECTION: Volunteer Services Grid */
 .volunteer-services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -765,7 +782,7 @@ section {
   margin-bottom: var(--spacing-xs);
 }
 
-/* Website Info Grid Styling */
+/* SECTION: Website Info Grid Styling */
 .website-info-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -799,7 +816,7 @@ section {
   text-align: left;
 }
 
-/* Language Switcher Styling */
+/* SECTION: Language Switcher Styling */
 .language-switcher {
   position: relative;
   display: inline-block;
@@ -886,7 +903,95 @@ section {
   gap: var(--spacing-sm);
 }
 
-/* Voting System Styling */
+/* SECTION: Goalball Minigame Container */
+.goalball-minigame-section {
+  margin-top: var(--spacing-xl);
+  padding-top: var(--spacing-xl);
+  border-top: 2px solid var(--border-light);
+}
+
+.minigame-container {
+  background: var(--bg-primary);
+  border: 2px dashed var(--border-medium);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xxl);
+  text-align: center;
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.minigame-container:hover {
+  border-color: var(--primary-color);
+  background: rgba(231, 76, 60, 0.05);
+}
+
+.minigame-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.minigame-icon {
+  width: 80px;
+  height: 80px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-white);
+  font-size: 2rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+.minigame-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.minigame-loading {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-xs);
+}
+
+.loading-dots span {
+  width: 8px;
+  height: 8px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  display: inline-block;
+  animation: loadingDots 1.4s infinite ease-in-out both;
+}
+
+.loading-dots span:nth-child(1) { animation-delay: -0.32s; }
+.loading-dots span:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes loadingDots {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+/* SECTION: Voting System Styling */
 .team-voting {
   background: var(--bg-primary);
 }
@@ -996,7 +1101,7 @@ section {
   font-size: 1.5rem;
 }
 
-/* Team Modal Styling */
+/* SECTION: Team Modal Styling */
 .team-modal {
   position: fixed;
   top: 0;
@@ -1138,7 +1243,7 @@ section {
   font-size: 0.9rem;
 }
 
-/* Responsive Design for New Features */
+/* SECTION: Responsive Design for New Features */
 @media (max-width: 768px) {
   .voting-content {
     grid-template-columns: 1fr;
@@ -1159,7 +1264,7 @@ section {
   }
 }
 
-/* Invitation Page Card Styles */
+/* SECTION: Invitation Page Card Styles */
 .invitation-card,
 .registration-card {
   background: var(--bg-secondary);
@@ -1276,7 +1381,7 @@ section {
   line-height: 1.6;
 }
 
-/* Award Icons */
+/* SECTION: Award Icons */
 .award-icon.gold {
   background: #ffd700;
 }
@@ -1293,7 +1398,7 @@ section {
   background: var(--secondary-color);
 }
 
-/* CTA Section */
+/* SECTION: CTA Section */
 .cta {
   background: var(--bg-secondary);
   text-align: center;
@@ -1321,7 +1426,7 @@ section {
   flex-wrap: wrap;
 }
 
-/* Teams Page */
+/* SECTION: Teams Page */
 .team-filters {
   padding: var(--spacing-xl) 0;
   background: var(--bg-secondary);
@@ -1445,7 +1550,7 @@ section {
   font-weight: 500;
 }
 
-/* Results & Tables */
+/* SECTION: Results & Tables */
 .table-container {
   overflow-x: auto;
   background: var(--bg-secondary);
@@ -1487,7 +1592,7 @@ section {
   color: var(--primary-color);
 }
 
-/* Status Indicators */
+/* SECTION: Status Indicators */
 .status-card {
   background: var(--bg-secondary);
   border-radius: var(--radius-xl);
@@ -1542,7 +1647,7 @@ section {
   color: var(--text-primary);
 }
 
-/* Schedule Timeline */
+/* SECTION: Schedule Timeline */
 .schedule-timeline {
   max-width: 800px;
   margin: 0 auto;
@@ -1606,7 +1711,7 @@ section {
   color: var(--text-secondary);
 }
 
-/* Forms */
+/* SECTION: Forms */
 .form-container {
   max-width: 600px;
   margin: 0 auto;
@@ -1666,7 +1771,7 @@ section {
   flex-wrap: wrap;
 }
 
-/* FAQ */
+/* SECTION: FAQ */
 .faq-container {
   max-width: 800px;
   margin: 0 auto;
@@ -1734,7 +1839,7 @@ section {
   text-decoration: underline;
 }
 
-/* Member Cards */
+/* SECTION: Member Cards */
 .leadership-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -1798,7 +1903,81 @@ section {
   transform: translateX(5px);
 }
 
-/* Developer Credits */
+/* SECTION: Join Our Team Styling - Match Registration Contact */
+.join-team {
+  background: var(--bg-primary);
+}
+
+.join-card {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xxl);
+  border: 1px solid var(--border-light);
+  box-shadow: 0 6px 20px var(--shadow-light);
+  transition: all var(--transition-base);
+}
+
+.join-card:hover {
+  box-shadow: 0 10px 30px var(--shadow-medium);
+  transform: translateY(-2px);
+}
+
+.join-content h2 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
+.join-content > p {
+  color: var(--text-secondary);
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.join-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.join-option {
+  background: var(--bg-primary);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
+  text-align: center;
+  transition: all var(--transition-base);
+}
+
+.join-option:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px var(--shadow-medium);
+}
+
+.join-option h3 {
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-md);
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+}
+
+.join-option h3 i {
+  font-size: 1.5rem;
+}
+
+.join-option p {
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.6;
+}
+
+/* SECTION: Developer Credits */
 .developers-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -1858,7 +2037,7 @@ section {
   margin-right: var(--spacing-sm);
 }
 
-/* Footer */
+/* SECTION: Footer */
 .footer {
   background: var(--bg-secondary);
   border-top: 1px solid var(--border-light);
@@ -1914,7 +2093,7 @@ section {
   color: var(--text-secondary);
 }
 
-/* Animations */
+/* SECTION: Animations */
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
@@ -1947,7 +2126,7 @@ section {
   transform: translateY(0);
 }
 
-/* Responsive Design */
+/* SECTION: Responsive Design */
 @media (max-width: 768px) {
   .nav-menu {
     display: none;
@@ -2022,6 +2201,10 @@ section {
   .container {
     padding: 0 var(--spacing-sm);
   }
+  
+  .join-options {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 480px) {
@@ -2046,7 +2229,7 @@ section {
   }
 }
 
-/* Large Screen Optimizations (21:9 ultrawide) */
+/* SECTION: Large Screen Optimizations (21:9 ultrawide) */
 @media (min-width: 1920px) {
   .container {
     max-width: 1600px;
@@ -2076,7 +2259,7 @@ section {
   }
 }
 
-/* Print Styles */
+/* SECTION: Print Styles */
 @media print {
   .navbar,
   .sidebar,
@@ -2101,7 +2284,7 @@ section {
   }
 }
 
-/* Accessibility Improvements */
+/* SECTION: Accessibility Improvements */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
@@ -2110,7 +2293,7 @@ section {
   }
 }
 
-/* High Contrast Mode */
+/* SECTION: High Contrast Mode */
 @media (prefers-contrast: high) {
   :root {
     --border-light: #000000;
@@ -2120,7 +2303,7 @@ section {
   }
 }
 
-/* Focus Styles for Accessibility */
+/* SECTION: Focus Styles for Accessibility */
 *:focus {
   outline: 2px solid var(--primary-color);
   outline-offset: 2px;
@@ -2133,7 +2316,7 @@ section {
   outline-offset: 2px;
 }
 
-/* Screen Reader Only Content */
+/* SECTION: Screen Reader Only Content */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -2146,7 +2329,7 @@ section {
   border: 0;
 }
 
-/* Additional Utility Classes */
+/* SECTION: Additional Utility Classes */
 .text-center {
   text-align: center;
 }
@@ -2167,7 +2350,7 @@ section {
   display: block;
 }
 
-/* Loading States */
+/* SECTION: Loading States */
 .loading {
   opacity: 0.6;
   pointer-events: none;
