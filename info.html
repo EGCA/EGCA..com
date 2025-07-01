@@ -312,22 +312,37 @@
 
     <script src="script.js"></script>
 </body>
-    <script>
+  <script>
+  const modal = document.getElementById("goalballModal");
+  const iframe = modal.querySelector("iframe");
+
   function openGoalballModal() {
-    document.getElementById("goalballModal").style.display = "block";
+    modal.style.display = "block";
+    document.body.style.overflow = "hidden"; // disable background scroll
   }
 
   function closeGoalballModal() {
-    document.getElementById("goalballModal").style.display = "none";
+    modal.style.display = "none";
+    document.body.style.overflow = ""; // re-enable scroll
+    const src = iframe.src;
+    iframe.src = "";    // reset iframe to stop audio
+    iframe.src = src;   // reload game
   }
 
-  // Optional: Close modal when clicking outside the iframe
+  // Click outside to close
   window.onclick = function(event) {
-    const modal = document.getElementById("goalballModal");
     if (event.target === modal) {
-      modal.style.display = "none";
+      closeGoalballModal();
     }
-  }
+  };
+
+  // ESC key to close
+  document.addEventListener('keydown', function(event) {
+    if (event.key === "Escape") {
+      closeGoalballModal();
+    }
+  });
 </script>
+
 
 </html>
