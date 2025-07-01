@@ -593,3 +593,22 @@ window.addEventListener('load', () => {
         console.log(`Page loaded in ${loadTime}ms`);
     }
 });
+
+function openGoalballModal() {
+  document.getElementById("goalball-modal").style.display = "flex";
+  document.body.style.overflow = "hidden"; // Prevent background scroll
+}
+
+function closeGoalballModal() {
+  const modal = document.getElementById("goalball-modal");
+  modal.style.display = "none";
+  document.getElementById("goalball-iframe").src = "GoalballChallenge/index.html"; // Stop the game
+  document.body.style.overflow = "auto";
+}
+
+// Optional: close on ESC
+window.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    closeGoalballModal();
+  }
+});
