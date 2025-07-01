@@ -91,11 +91,16 @@ header h1 {
 }
 
 #goalballCanvas {
-    border: 3px solid #fff;
-    border-radius: 10px;
-    background: #4a7c2a;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  max-height: 80vh; /* prevent canvas from dominating the screen */
+  border: 3px solid #fff;
+  border-radius: 10px;
+  background: #4a7c2a;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
+
 
 .game-overlay {
     position: absolute;
