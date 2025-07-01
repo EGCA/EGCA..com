@@ -320,11 +320,19 @@ button:focus {
 }
 
 html, body {
-  overflow-x: hidden;
-  overflow-y: auto; /* allow scrolling */
+  margin: 0;
+  padding: 0;
   min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto; /* <— add this line */
   background-color: #0d0f24;
 }
+
+#hud {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
 
 
 #game-container {
