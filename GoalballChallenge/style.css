@@ -299,6 +299,15 @@ header h1 {
     }
 }
 
+@media screen and (max-width: 600px) {
+  #game-container canvas,
+  #game-container iframe {
+    width: 95vw;
+    height: 95vh;
+  }
+}
+
+
 /* Focus styles for keyboard navigation */
 button:focus {
     outline: 3px solid #ffd700;
