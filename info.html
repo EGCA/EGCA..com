@@ -159,25 +159,31 @@
                             
                             <!-- SECTION: Goalball Minigame Container -->
 
-<!-- Modal Launcher -->
+<!-- Modal Trigger Button -->
 <div class="goalball-minigame-section" style="text-align: center; padding: 20px;">
   <button onclick="openGoalballModal()" class="btn btn-primary" style="font-size: 1.1rem; padding: 10px 20px;">
     🎮 Launch Goalball Mini-Game
   </button>
 </div>
 
-<!-- Modal Popup Container -->
-<div id="goalballModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeGoalballModal()">&times;</span>
-    <iframe 
-      src="GoalballChallenge/index.html"
-      width="640"
-      height="960"
-      frameborder="0"
-      allowfullscreen
-      style="border: none;">
-    </iframe>
+<!-- Goalball Modal -->
+<div class="team-modal" id="goalballModal">
+  <div class="modal-overlay" onclick="closeGoalballModal()"></div>
+  <div class="modal-content" style="max-width: 960px; height: 90vh; display: flex; flex-direction: column; padding: 0;">
+    <div class="modal-header">
+      <div class="modal-title">
+        <span class="team-flag-large">🎮</span>
+        <h2>Goalball Mini-Game</h2>
+      </div>
+      <button class="modal-close" onclick="closeGoalballModal()">&times;</button>
+    </div>
+    <div class="modal-body" style="flex: 1; padding: 0;">
+      <iframe 
+        src="GoalballChallenge/index.html"
+        style="width: 100%; height: 100%; border: none;"
+        allowfullscreen>
+      </iframe>
+    </div>
   </div>
 </div>
 
@@ -317,16 +323,11 @@
   const iframe = modal.querySelector("iframe");
 
   function openGoalballModal() {
-    modal.style.display = "block";
-    document.body.style.overflow = "hidden"; // disable background scroll
+    document.getElementById("goalballModal").classList.add("active");
   }
 
   function closeGoalballModal() {
-    modal.style.display = "none";
-    document.body.style.overflow = ""; // re-enable scroll
-    const src = iframe.src;
-    iframe.src = "";    // reset iframe to stop audio
-    iframe.src = src;   // reload game
+    document.getElementById("goalballModal").classList.remove("active");
   }
 
   // Click outside to close
