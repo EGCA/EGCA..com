@@ -2469,4 +2469,10 @@ section {
   z-index: 1;
 }
 
+@media (max-width: 768px) {
+  #goalballModal .modal-content {
+    width: 95% !important;
+    height: 85vh !important;
+  }
+}
 
