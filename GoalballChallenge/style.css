@@ -299,13 +299,13 @@ header h1 {
     }
 }
 
-@media screen and (max-width: 600px) {
-  #game-container canvas,
-  #game-container iframe {
-    width: 95vw;
-    height: 95vh;
+@media screen and (max-width: 500px) {
+  #goalballCanvas {
+    width: 100% !important;
+    height: auto !important;
   }
 }
+
 
 
 /* Focus styles for keyboard navigation */
@@ -315,12 +315,12 @@ button:focus {
 }
 
 html, body {
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
   overflow-x: hidden;
+  overflow-y: auto; /* allow scrolling */
+  min-height: 100vh;
   background-color: #0d0f24;
 }
+
 
 #game-container {
   display: flex;
