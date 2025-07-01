@@ -2420,7 +2420,7 @@ section {
   }
 }
 
-/* Modal Styles for Goalball Popup */
+/* Goalball Mini-Game Modal */
 .modal {
   display: none;
   position: fixed;
@@ -2430,36 +2430,43 @@ section {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(5px);
 }
 
+/* Responsive modal box */
 .modal-content {
   position: relative;
-  margin: auto;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 660px;
-  max-width: 95%;
-  background: #000;
+  width: 95%;
+  max-width: 800px;
+  height: 90vh;
+  margin: 5vh auto;
+  background-color: #000;
   border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
   box-shadow: 0 0 30px rgba(0,0,0,0.5);
-  padding: 10px;
-  text-align: center;
 }
 
+/* Responsive iframe */
 .modal-content iframe {
+  flex: 1;
   width: 100%;
-  height: 960px;
-  border-radius: 10px;
+  height: 100%;
+  border: none;
 }
 
-.close {
+/* Close button */
+.modal .close {
+  position: absolute;
+  top: 12px;
+  right: 20px;
   color: white;
   font-size: 28px;
   font-weight: bold;
-  position: absolute;
-  right: 16px;
-  top: 10px;
   cursor: pointer;
+  z-index: 1;
 }
+
 
