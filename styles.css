@@ -2419,3 +2419,47 @@ section {
     transform: rotate(360deg);
   }
 }
+
+/* Modal Styles for Goalball Popup */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+  position: relative;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 660px;
+  max-width: 95%;
+  background: #000;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+  padding: 10px;
+  text-align: center;
+}
+
+.modal-content iframe {
+  width: 100%;
+  height: 960px;
+  border-radius: 10px;
+}
+
+.close {
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  right: 16px;
+  top: 10px;
+  cursor: pointer;
+}
+
