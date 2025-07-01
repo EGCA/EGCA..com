@@ -159,19 +159,28 @@
                             
                             <!-- SECTION: Goalball Minigame Container -->
 
-<div class="goalball-minigame-section">
-    <div id="goalball-minigame-container" class="minigame-container" style="text-align: center; padding: 20px;">
-        <iframe 
-            src="GoalballChallenge/index.html" 
-            width="640" 
-            height="960" 
-            frameborder="0" 
-            allowfullscreen 
-            style="border: 2px solid #ccc; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.2);">
-        </iframe>
-        <p style="margin-top: 10px;">🎮 Play the Enhanced Goalball Mini-Game</p>
-    </div>
+<!-- Modal Launcher -->
+<div class="goalball-minigame-section" style="text-align: center; padding: 20px;">
+  <button onclick="openGoalballModal()" class="btn btn-primary" style="font-size: 1.1rem; padding: 10px 20px;">
+    🎮 Launch Goalball Mini-Game
+  </button>
 </div>
+
+<!-- Modal Popup Container -->
+<div id="goalballModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeGoalballModal()">&times;</span>
+    <iframe 
+      src="GoalballChallenge/index.html"
+      width="640"
+      height="960"
+      frameborder="0"
+      allowfullscreen
+      style="border: none;">
+    </iframe>
+  </div>
+</div>
+
 
                             
                         </div>
