@@ -1,0 +1,150 @@
+I want to build a fully functional browser-based 2D Goalball mini-game using HTML, CSS, and vanilla JavaScript (no frameworks). This project is intended to simulate the basics of the Paralympic sport Goalball for educational and interactive use on a tournament website.
+
+🎯 Game Objective:
+2D, canvas-based mini-game
+
+Simulates 3v3 Goalball: user (bottom team) vs bot (top team)
+
+Goal: First to 5 points wins
+
+Educational: Sound-based gameplay, reflexes, defense logic
+
+🗂 File Structure Required:
+pgsql
+Copy
+Edit
+index.html         <-- HTML layout
+style.css          <-- Game and UI styling
+game.js            <-- Core canvas logic
+assets/
+  bell-left.wav
+  bell-center.wav
+  bell-right.wav   <-- Sound for spatial ball movement (optional)
+1. 📄 index.html
+Page title: "Enhanced Goalball – Paralympic Sport Simulation"
+
+Load style.css and game.js
+
+HTML body must include:
+
+<canvas id="goalballCanvas" width="600" height="900"></canvas>
+
+<div id="hud"> with:
+
+Scoreboard (YOU: 0 | BOT: 0)
+
+Game instructions/messages
+
+"Play Game" button
+
+Optional: dropdowns or buttons for serve/defense choices
+
+✅ Ensure the canvas and button actually appear and are centered. Use <script src="game.js"></script> at the bottom of the HTML.
+
+2. 🎨 style.css
+Make canvas and UI responsive and centered
+
+Green background for the court
+
+Dashed midline + goal areas (visually indicated)
+
+Style the button: rounded, hover, accessible
+
+Layout:
+
+Top: Title + Score
+
+Center: Game canvas
+
+Bottom: Button and instructions
+
+3. 🧠 game.js
+Initialize and render:
+
+On Load:
+Draw full Goalball court on canvas
+
+Draw:
+
+3 player circles (P1, P2, P3) at bottom
+
+3 bot circles (B1, B2, B3) at top
+
+Center dashed line and goal areas
+
+Gameplay Logic:
+Start Game
+
+Clicking "Play Game" starts the loop
+
+Show 3-2-1 countdown on canvas
+
+Randomly decide who serves first
+
+Serve Phase
+
+User clicks to choose which player will serve (P1–P3)
+
+Choose direction (Left, Center, Right)
+
+Ball moves (yellow circle) from user to bot side
+
+Bot Defends
+
+Bot players randomly guess Left, Center, or Right
+
+If correct, block the ball
+
+If not, user scores a goal
+
+Bot Serve Phase
+
+Same logic in reverse
+
+Player sets Left/Right position for P1–P3
+
+Ball rolls toward bottom
+
+If defenders match direction = block
+
+Audio Cues
+
+When ball is moving, play:
+
+bell-left.wav (if direction is left)
+
+bell-center.wav (if center)
+
+bell-right.wav (if right)
+
+Game End
+
+First to 5 wins
+
+Show final message: “You Win!” or “Bot Wins”
+
+Display “Play Again” button
+
+✅ Debugging & Rendering Checklist
+Ensure game.js is a real JS file and not HTML by accident
+
+Use ctx.clearRect() and ctx.fillRect() properly
+
+Draw everything on the <canvas> (players, ball, field)
+
+Attach click listeners for game buttons and player controls
+
+Bonus Features (Optional)
+Directional audio cue via stereo pan (Web Audio API)
+
+Simple animations (ball easing movement)
+
+Visual glow or feedback on blocks / goals
+
+Adaptive mobile layout
+
+Countdown overlay animation (3…2…1…Go!)
+
+Summary:
+This game must render properly inside the Replit preview window, using real <canvas>-based drawing and modular JavaScript logic. The goal is to simulate Goalball in a simple, accessible format with real-time feedback and audio cues. The game should be playable from start to finish, responsive, and fully self-contained in the provided files.
+
