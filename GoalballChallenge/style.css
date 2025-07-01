@@ -317,19 +317,37 @@ button:focus {
 html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
-  overflow: hidden;
-  background-color: #0d0f24; /* Optional: dark background */
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: #0d0f24;
 }
 
 #game-container {
-  width: 100vw;
-  height: 100vh;
-  max-width: 100%;
-  max-height: 100%;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
-  overflow: hidden;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
 }
+
+@media screen and (max-width: 500px) {
+  #goalballCanvas {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .instructions {
+    font-size: 0.9rem;
+    padding: 15px;
+  }
+
+  .main-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+
 
