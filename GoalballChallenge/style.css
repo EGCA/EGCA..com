@@ -91,10 +91,9 @@ header h1 {
 }
 
 #goalballCanvas {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  max-height: 80vh; /* prevent canvas from dominating the screen */
+  width: auto;
+  height: 75vh; /* Use 75% of screen height for full visibility */
+  aspect-ratio: 2 / 3; /* Maintain 600x900 aspect ratio */
   border: 3px solid #fff;
   border-radius: 10px;
   background: #4a7c2a;
@@ -262,18 +261,12 @@ header h1 {
 /* Responsive Design */
 @media (max-width: 768px) {
     body {
-        padding: 10px;
-    }
+    padding: 5px;
+  }
     
-    header h1 {
-        font-size: 2rem;
-    }
-    
-    #goalballCanvas {
-        width: 100%;
-        max-width: 400px;
-        height: auto;
-    }
+  header h1 {
+    font-size: 1.8rem;
+  }
     
     .scoreboard {
         flex-direction: column;
@@ -302,13 +295,6 @@ header h1 {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
-}
-
-@media screen and (max-width: 500px) {
-  #goalballCanvas {
-    width: 100% !important;
-    height: auto !important;
-  }
 }
 
 
@@ -345,11 +331,6 @@ html, body {
   box-sizing: border-box;
 }
 
-@media screen and (max-width: 500px) {
-  #goalballCanvas {
-    width: 100% !important;
-    height: auto !important;
-  }
 
   .instructions {
     font-size: 0.9rem;
