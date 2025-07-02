@@ -125,6 +125,7 @@ main, .navbar, footer {
     left: 0;
     z-index: 0;
     pointer-events: none;
+   transition: transform 0.2s ease;
 }
 
 /* Ensuring hero content stays above */
