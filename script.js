@@ -612,3 +612,17 @@ window.addEventListener('keydown', function (e) {
     closeGoalballModal();
   }
 });
+document.addEventListener("mousemove", (e) => {
+  const video = document.querySelector(".background-video");
+  if (!video) return;
+
+  const { innerWidth, innerHeight } = window;
+  const centerX = innerWidth / 2;
+  const centerY = innerHeight / 2;
+
+  const moveX = (e.clientX - centerX) / centerX;
+  const moveY = (e.clientY - centerY) / centerY;
+
+  // Subtle parallax-style movement
+  video.style.transform = `translate(${moveX * 10}px, ${moveY * 5}px) scale(1.03)`;
+});
