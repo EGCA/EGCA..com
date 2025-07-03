@@ -625,4 +625,8 @@ document.addEventListener("mousemove", (e) => {
 
   // Subtle parallax-style movement
   video.style.transform = `translate(${moveX * 10}px, ${moveY * 5}px) scale(1.03)`;
+    const hero = document.querySelector(".hero");
+hero.addEventListener("mousemove", (e) => {
+  // same logic inside
+});
 });
